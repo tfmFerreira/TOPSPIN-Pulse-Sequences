@@ -1,0 +1,68 @@
+1 ze
+2 d1 do:f2
+1m
+d12 pl1:f1 pl32:f2
+
+if "l0==0" goto 7
+if "l0==1" goto 4
+"l3=l0-1"
+R18a,
+3 (p32 ph7):f2
+  (p32 ph8):f2
+  lo to 3 times l1
+  lo to R18a times l3
+
+4 (p32 ph7):f2
+  (p32 ph8):f2
+  lo to 4 times l2
+
+  (p32 ph7):f2
+  (ralign (p32 ph8):f2 (p1 ph11) )
+  (lalign (p32 ph9):f2 (p1 ph11) )
+  (p32 ph10):f2
+# 66 "/opt/topspin3.6.3/exp/stan/nmr/lists/pp/user/TF_NA_RPDLF"
+5  (p32 ph9):f2
+  (p32 ph10):f2
+  lo to 5 times l2
+
+if "l0==1" goto 7
+
+R18b,
+6 (p32 ph9):f2
+  (p32 ph10):f2
+  lo to 6 times l1
+  lo to R18b times l3
+
+7
+  d12 pl2:f2
+  (p3 ph1):f2
+  d4
+  (center (p4 ph2):f2 (p2 ph4) )
+  d4
+  (p3 ph3):f2 (p1 ph5)
+  d3
+  (center (p4 ph2):f2 (p2 ph6) )
+  d3 pl12:f2
+
+  go=2 ph31 cpd2:f2 finally do:f2
+  d11 wr #0 if #0 zd iu0;save data to disk
+  lo to 2 times td1
+
+HaltAcqu, 1m
+exit
+
+ph1= 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3
+ph2= 1 3
+ph3= 0 0 2 2
+ph4= 1 3
+ph5= 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0
+ph6= 1 3 1 3 2 0 2 0
+ph7= (float, 90.0) 70
+ph8= (float, 90.0) 290
+ph9= (float, 90.0) 250
+ph10=(float, 90.0) 110
+ph11=0 2 0 2 1 3 1 3 0 2 0 2 1 3 1 3
+ph31=3 3 1 1 0 0 2 2
+
+
+
