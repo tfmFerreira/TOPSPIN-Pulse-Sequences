@@ -20,7 +20,6 @@ R18a,
   (ralign (p32 ph8):f2 (p1 ph11) )
   (lalign (p32 ph9):f2 (p1 ph11) )
   (p32 ph10):f2
-# 66 "/opt/topspin3.6.3/exp/stan/nmr/lists/pp/user/TF_NA_RPDLF"
 5  (p32 ph9):f2
   (p32 ph10):f2
   lo to 5 times l2
